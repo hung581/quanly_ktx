@@ -1,0 +1,57 @@
+/* 1. Reset và Bố cục chính */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; }
+
+/* Bố cục trang: Chia Sidebar trái và Nội dung phải */
+.main-layout { display: flex; min-height: 100vh; }
+
+/* 2. Sidebar (Menu) */
+.sidebar {
+    width: 260px;
+    background: #2c3e50; /* Màu tối chuyên nghiệp */
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+}
+.sidebar h3 { margin-bottom: 20px; font-size: 1.2rem; }
+.sidebar ul { list-style: none; }
+.sidebar ul li { margin-bottom: 15px; }
+.sidebar ul li a { color: #bdc3c7; text-decoration: none; transition: 0.3s; }
+.sidebar ul li a:hover { color: white; }
+
+/* 3. Khu vực Nội dung chính */
+.content-area {
+    flex-grow: 1;
+    padding: 40px;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); /* Nền rực rỡ */
+}
+
+/* 4. Thống kê (Cards) */
+.card-container { display: flex; gap: 30px; margin-bottom: 40px; }
+.card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.card-blue { background: linear-gradient(45deg, #007bff, #00c6ff); }
+.card-green { background: linear-gradient(45deg, #28a745, #75d69c); }
+
+/* 5. Bảng dữ liệu */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+th { background-color: #34495e; color: white; padding: 15px; }
+td { padding: 15px; border-bottom: 1px solid #eee; text-align: center; }
+
+/* 6. Nút bấm */
+.btn { padding: 8px 15px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; }
+.btn-edit { background-color: #3498db; }
+.btn-delete { background-color: #e74c3c; }
